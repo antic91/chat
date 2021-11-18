@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,700;1,400;1,600&display=swap');
 
-
+/*Style wrapper and form*******************/
 *{
     box-sizing: border-box;
     overflow: hidden;
@@ -57,11 +57,12 @@ body{
 .formGroup{
     position: relative;
     width: 300px;
-    height: auto;
+    height: 83px;   
+    align-content: flex-start;
 }
 /*formGroup div on top margin bottom*/
 .top{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /*Form label*/
@@ -81,11 +82,21 @@ body{
     outline: none;
     background-color: transparent;
     border-bottom: 1px solid #ffffff;
-    color: #ffffff;
+    color: #ffffff!important;
 }
 .input::placeholder {
   font-size: .9em;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: 'color 9999s ease-out, background-color 9999s ease-out';
+  transition-delay: 9999s;
+}
+
+
+
 
 /*form button*/
 .button{
@@ -95,6 +106,67 @@ body{
     height: fit-content;
     border: none;
     outline: none;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 5px;
+}
+
+/*small */
+.small{
+    position: relative;
+    width: 100%;
+    font-size: .8rem;
+    border: none;
+    outline: none;
+    color: red;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+/*Display none class*/
+
+.display{
+    display: none;
+}
+
+
+
+/* Animation Form*/
+@keyframes formAnimation {
+    0% {
+    border: 1px solid #ffffff;
+    height: 500px;
+    }
+    65% {
+        border: 1px solid #ffffff;
+        height: 0px;
+        width: 500px;
+    }
+    95% {
+        border: 1px solid #ffffff;
+        height: 0px;
+        width: 0;
+    }
+    100% {
+        border: none;
+        display: none;
+    }
+
+}
+.animation {
+    animation-name: formAnimation;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+/*Opacity transition*/
+.opacity1 {
+    opacity: 0;
+    transition: all .3s;
+    transition-delay: .6s;
+}
+/*Opacity transition*/
+.opacity2 {
+    opacity: 0;
+    transition: all .3s;
+    transition-delay: 1.1s;
 }
