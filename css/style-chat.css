@@ -120,6 +120,7 @@
     position: relative;
     padding: 5px 0;
     width: 520px;
+    min-height: 21px;
     height: max-content;
     align-content: flex-start;
     opacity: 0;
@@ -137,7 +138,8 @@
     outline: none;
     top: 0;
     right: 0;
-    z-index: 999999;
+    z-index: 999!important;
+    padding: 3px;
 }
 /*Animation*/
 @keyframes wrapperAnim {
