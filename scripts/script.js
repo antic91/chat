@@ -90,6 +90,9 @@ function form() {
     button.textContent = "Go to chat!";
     button.id = "buttonForm";
     button.type = "submit";
+
+
+    
     let small3 = document.createElement('small');
     small3.classList.add("small", "flex","display");
     small3.style = "line-height: normal; width:300px;";
@@ -119,6 +122,9 @@ function validateForm(event) {
     /*Preventing default to stop submit, so we can check is input are not empty etc.*/
     event.preventDefault(); 
 
+    var button = document.getElementById("buttonForm");
+    button.disabled = true;
+
     const a = event.target['Username'].value;
     const b = event.target['code'].value;
 
@@ -131,6 +137,7 @@ function validateForm(event) {
         small1.classList.remove("display");
     } else {
         small1.classList.add("display");
+        
     }
 
     if (b.length == 0) {
@@ -140,9 +147,16 @@ function validateForm(event) {
         small2.classList.add("display");
     }
 
-    if (a.length != 0 && b.length != 0) {
+
+    if (a.length == 0 || b.length == 0) {
+        /*return if not valid*/
+        button.disabled = false;
+        return
+    }
+    else if (a.length != 0 && b.length != 0) {
         /*Calling server to check username and secret code*/
         callServer(a, b)
+        console.log("call")
     }
 }
 
@@ -231,7 +245,7 @@ async function callServer(val1, val2) {
 async function callServer(val1, val2) {
     /*Data to send*/
     var data = JSON.stringify({ val1: val1, val2: val2 });
-
+    var button = document.getElementById("buttonForm");
     try {
         var response = await axios.post('https://chat-expressjs.herokuapp.com/logIn', data,{headers: {
         // Overwrite Axios's automatically set Content-Type
@@ -251,6 +265,8 @@ async function callServer(val1, val2) {
         }
         
     } catch (error) {
+        /*If there is error enable button*/
+        button.disabled = false;
         if (error.response) {
             console.log(error.response.data);
             console.log(error.response.status);
