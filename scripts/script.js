@@ -153,10 +153,10 @@ function validateForm(event) {
         button.disabled = false;
         return
     }
+
     else if (a.length != 0 && b.length != 0) {
         /*Calling server to check username and secret code*/
         callServer(a, b)
-        console.log("call")
     }
 }
 
