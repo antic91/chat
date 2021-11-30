@@ -14,7 +14,7 @@
 **********************************/
 #chatWrapper{
     position: relative;
-    align-content: flex-start;
+    align-content: flex-end;
     align-items: center;
 }
 
@@ -79,7 +79,6 @@
 
 .spanWrapper{
     position: relative;
-    width: 650px;
     width: 100%;
     height: max-content;
     padding: 5px 0;
@@ -201,6 +200,7 @@
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     transition-delay: 0s;
     opacity: 1;
+    overflow-y: scroll;
     display: flex;
     justify-content: flex-start;
 }
@@ -213,11 +213,7 @@
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
-    /*Chat height*/
-    .opacityChat1{
-        height: 90%;
-        padding: 15px 0 0 0;
-    }
+    
     /*Input width*/
     .inputWrite {
         width: 60%;
@@ -256,15 +252,11 @@
             padding: 15px;
         }
     }
+    
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
-    /*Chat height*/
-    .opacityChat1 {
-        height: 90%;
-        padding: 15px 0 0 0;
-    }
     /*Input width*/
     .inputWrite {
         width: 60%;
