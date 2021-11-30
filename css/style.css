@@ -108,6 +108,8 @@ input:-webkit-autofill:active {
     outline: none;
     margin-top: 20px;
     padding: 5px;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /*small */

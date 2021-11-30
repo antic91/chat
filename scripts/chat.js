@@ -263,9 +263,6 @@ function sendMessage(){
 
 /*Delete one row*/
 function deleteRow(obj) {
-    console.log(obj.date)
-    console.log(obj.name)
-    console.log(obj.message)
 
     axios.delete('https://chat-expressjs.herokuapp.com/delete', { data: obj })
     .then((res) => {
