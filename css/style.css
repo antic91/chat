@@ -218,6 +218,9 @@ input:-webkit-autofill:active {
     }
     }
 
+    #wrapper {
+    display: none;
+    }
 
 }
 
@@ -256,6 +259,9 @@ input:-webkit-autofill:active {
     }
     }
 
+    #wrapper {
+        display: none;
+    }
 
 }
 
