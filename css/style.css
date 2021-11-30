@@ -170,3 +170,105 @@ input:-webkit-autofill:active {
     transition: all .3s;
     transition-delay: 1.1s;
 }
+
+
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+    #wrapper{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+    /*Form class*/
+    .form {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    }
+
+    /*Form group*************************/
+    .formGroup {
+    width: 90%;
+    }
+    /* Animation Form*/
+    @keyframes formAnimation {
+    0% {
+        border: 1px solid #ffffff;
+        height: 300px;
+    }
+    65% {
+        border: 1px solid #ffffff;
+        height: 0px;
+        width: 300px;
+    }
+    95% {
+        border: 1px solid #ffffff;
+        height: 0px;
+        width: 0;
+    }
+    100% {
+        border: none;
+        display: none;
+    }
+    }
+
+
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+    /*Form class*/
+    .form {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    }
+
+    /*Form group*************************/
+    .formGroup {
+    width: 90%;
+    }
+    /* Animation Form*/
+    @keyframes formAnimation {
+    0% {
+        border: 1px solid #ffffff;
+        height: 300px;
+    }
+    65% {
+        border: 1px solid #ffffff;
+        height: 0px;
+        width: 300px;
+    }
+    95% {
+        border: 1px solid #ffffff;
+        height: 0px;
+        width: 0;
+    }
+    100% {
+        border: none;
+        display: none;
+    }
+    }
+
+
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+}
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+}
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+}
+
+/* X-Large devices (large desktops, less than 1400px)*/
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+}

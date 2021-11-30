@@ -127,6 +127,9 @@
     display: none;
     font-size: 1rem;
     color: #000000;
+    word-break: break-all;
+    overflow: hidden;
+    padding-right: 15px;
 }
 .deleteButton{
     position: absolute;
@@ -199,4 +202,148 @@
     opacity: 1;
     display: flex;
     justify-content: flex-start;
+}
+
+
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+}
+
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+    /*Chat height*/
+    .opacityChat1{
+        height: 100%;
+        padding: 15px 0;
+    }
+    /*Input width*/
+    .inputWrite {
+        width: 60%;
+    }
+    /*button width*/
+    .buttonSend {
+        width: 40%;
+    }
+
+    /*Span left*/
+    .leftSide {
+        width: 30%;
+    }
+    /*Right*/
+    .rightSide {
+        width: 70%;
+        padding-left: 20px;
+    }
+
+        /*Animation*/
+    @keyframes wrapperAnim {
+        0% {
+            border: 1px solid #ffffff;
+            height: 0px;
+            width: 0px;
+        }
+        5% {
+            border: 1px solid #ffffff;
+            height: 0px;
+            width: 100%;
+        }
+        100% {
+            background-color: #ffffff;
+            border: none;
+            height: 100%;
+            width: 100%;
+            padding: 15px;
+        }
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+    /*Chat height*/
+    .opacityChat1 {
+        height: 100%;
+        padding: 15px 0;
+    }
+    /*Input width*/
+    .inputWrite {
+        width: 60%;
+    }
+    /*button width*/
+    .buttonSend {
+        width: 40%;
+    }
+
+    /*Span left*/
+    .leftSide {
+        width: 30%;
+    }
+    /*Right*/
+    .rightSide {
+        width: 70%;
+        padding-left: 20px;
+    }
+
+
+    /*Animation*/
+    @keyframes wrapperAnim {
+        0% {
+            border: 1px solid #ffffff;
+            height: 0px;
+            width: 0px;
+        }
+        5% {
+            border: 1px solid #ffffff;
+            height: 0px;
+            width: 100%;
+        }
+        100% {
+            background-color: #ffffff;
+            border: none;
+            height: 100%;
+            width: 100%;
+            padding: 15px;
+        }
+    }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+    .inputWrite{
+        width: 350px;
+    }
+    .buttonSend{
+        width: 120px;
+    }
+
+    /*Span left*/
+    .leftSide{
+        width: 75px;
+    }
+    /*Right*/
+    .rightSide{
+        width: 375px;
+        padding-left: 20px;
+    }
+    /*Animation*/
+    @keyframes wrapperAnim {
+        0% {
+            border: 1px solid #ffffff;
+            height: 0px;
+            width: 0px;
+        }
+        5% {
+            border: 1px solid #ffffff;
+            height: 0px;
+            width: 500px;
+        }
+        100% {
+            background-color: #ffffff;
+            border: none;
+            height: 700px;
+            width: 500px;
+            padding: 15px;
+        }
+    }
+
 }
